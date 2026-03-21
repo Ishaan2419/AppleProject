@@ -11,7 +11,7 @@ if not os.path.exists("fruit_model.keras"):
     gdown.download(url, "fruit_model.keras", quiet=False)
 
 # Load trained model
-model = tf.keras.models.load_model("fruit_model.keras",compile=False)
+model = tf.keras.models.load_model("fruit_model.keras", compile=False, safe_mode=False)
 
 class_names = [
     "freshapples",
