@@ -6,12 +6,12 @@ import gdown
 import os
 
 # Download model if not present
-if not os.path.exists("fruit_model.keras"):
-    url = "https://drive.google.com/uc?id=106hP_fAg-_sez85rh1NHZ8iTmwDafbYO"
-    gdown.download(url, "fruit_model.keras", quiet=False)
+if not os.path.exists("fruit_model.h5"):
+    url = "https://drive.google.com/uc?id=1FtlP_6YBTxPst-_gWEhlVta4dot80H65"
+    gdown.download(url, "fruit_model.h5", quiet=False)
 
-# Load trained model
-model = tf.keras.models.load_model("fruit_model.keras", compile=False, safe_mode=False)
+# Load model
+model = tf.keras.models.load_model("fruit_model.h5", compile=False)
 
 class_names = [
     "freshapples",
